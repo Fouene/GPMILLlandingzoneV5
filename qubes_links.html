@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/dtm_logo.png" type="image/png">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="design/default.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Liens Qubes | DTM</title>
+</head>
+<body>
+  <!-- PREMIERE SECTION Barre de Navigation-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand text-center"><img src="img/gmp_logo.png" style="height:50px" class="mx-auto d-block"/></a>
+  
+      <!-- <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="accueil.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+          <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+        </svg>&ensp;Acceuil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="tableaux_de_bord.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+          <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+          <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+        </svg>&ensp;Tableau de bord</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+          <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+        </svg>&ensp;
+          Liens web
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="qubes_links.html">Qubes</a>
+          <a class="dropdown-item" href="construction.html">Tetraed</a>
+          <a class="dropdown-item" href="construction.html">Preactor</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="construction.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
+          <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+        </svg>&ensp;Repertoires d'échanges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="tickets.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-detailed" viewBox="0 0 16 16">
+          <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+          <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/>
+        </svg>&ensp;Tickets</a>
+      </li>      
+    </ul>-->
+  </nav> 
+    <!-- DEUXIEME SECTION les links -->
+  <section class="bg-light">
+    <div class="d-flex justify-content-between"> 
+      <div>  
+        <a class="imgcenter" href="https://servicedesk.vivescia.com/front/central.php"><img src="img/glpi_logo.png" width="180" height="70" ></a>
+      </div> 
+      <div>   
+        <a class="imgcenter" href="http://bugtracker.ntx/my_view_page.php"><img src="img/mantis_logo.png" width="180" height="70" ></a>
+      </div> 
+      <div>  
+        <a class="imgcenter" href="http://its001webixo.it.fr/portailv6/Default.aspx?tabid=95&language=fr-FR&idut=4018"><img src="img/webixo_logo.png" width="130" height="60" ></a>
+      </div> 
+      <div>  
+        <a class="imgcenter" href="https://www.office.com/?auth=2"><img src="img/Office_logo.png" width="160" height="50"></a>
+      </div> 
+      <div>  
+        <a class="imgcenter" href="https://ceres365.sharepoint.com/sites/gmp-directionTechnique"><img src="img/sharepoint_logo.png" width="100" height="80" ></a>
+      </div> 
+      <div>  
+        <a class="imgcenter" href="https://outlook.office.com/mail/inbox"><img src="img/outlook_logo.png" width="120" height="70" ></a>
+      </div> 
+  </div>
+</section> 
+  <!-- TROISIEME SECTION les links -->
+<section class="border">
+  <h1 class="text-center mb-3">Liens Web : Qubes</h1>
+ <div class="d-flex flex-row justify-content-between m-1 text-center"> 
+    <div class="bg-light p-2 m-3 rounded shadow w-25">
+      <h5 class="text-center">Bilan d'OF</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-primary" onclick="window.open('http://its002gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>  
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-primary" onclick="window.open('http://its004gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>  
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-primary" onclick="window.open('http://its005gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>  
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-primary" onclick="window.open('http://its046gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">   
+        <button class="btn btn-primary" onclick="window.open('http://its062gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">   
+        <button class="btn btn-primary" onclick="window.open('http://its170gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">   
+        <button class="btn btn-primary" onclick="window.open('http://its200gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Reims">200</button>
+      </div>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">   
+        <button class="btn btn-primary" onclick="window.open('http://its250gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">   
+        <button class="btn btn-primary" onclick="window.open('http://its439gpas.it.fr:83/WebProcess.cit/MEW2_0010/SelectionOPE', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div>  
+    <div class="bg-light  p-2 m-3 rounded shadow w-25 text-center">
+      <h5 class="text-center">Contrôles Qualité</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-success" onclick="window.open('http://its002gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its004gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its005gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-success" onclick="window.open('http://its046gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its062gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-success" onclick="window.open('http://its170gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-success" onclick="window.open('http://its200gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Reims">200</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its250gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-success" onclick="window.open('http://its439gpas.it.fr:83/WebProcess.cit/LIMS.Report.Control/Formulaire', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div>  
+    <div class="bg-light  p-2 m-3 rounded shadow w-25 text-center">
+      <h5 class="text-center">Palettisation</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-warning" onclick="window.open('http://its002gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-warning" onclick="window.open('http://its004gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-warning" onclick="window.open('http://its005gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-warning" onclick="window.open('http://its046gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-warning" onclick="window.open('http://its062gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-warning" onclick="window.open('http://its170gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-warning" onclick="window.open('http://its200gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Reims">200</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-warning" onclick="window.open('http://its250gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-warning" onclick="window.open('http://its439gpas:81/WebProcess.cit/XOW3_0091/Affichage', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div>  
+    <div class="bg-light  p-2 m-3 rounded shadow w-25 text-center">
+      <h5 class="text-center">Fiches Articles</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-danger" onclick="window.open('http://its002gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-danger" onclick="window.open('http://its004gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-danger" onclick="window.open('http://its005gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-danger" onclick="window.open('http://its046gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-danger" onclick="window.open('http://its062gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-danger" onclick="window.open('http://its170gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-danger" onclick="window.open('http://its200gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Reims">200</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-danger" onclick="window.open('http://its250gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-danger" onclick="window.open('http://its439gpas:81/Shell/##Inventory/ItemsTree', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div>
+    <div class="bg-light  p-2 m-3 rounded shadow w-25 text-center">
+      <h5 class="text-center">Traçabilité web</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-secondary" onclick="window.open('http://its002gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-secondary" onclick="window.open('http://its004gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-secondary" onclick="window.open('http://its005gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-secondary" onclick="window.open('http://its046gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-secondary" onclick="window.open('http://its062gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-secondary" onclick="window.open('http://its170gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-secondary" onclick="window.open('http://its200gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Reims">200</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-secondary" onclick="window.open('http://its250gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-secondary" onclick="window.open('http://its439gpas:81/Shell/##Inventory/Traceability', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div>
+    <div class="bg-light  p-2 m-3 rounded shadow w-25 text-center">
+      <h5 class="text-center">Indicateurs</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-primary" onclick="window.open('http://its002gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=002', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-primary" onclick="window.open('http://its004gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=004', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-primary" onclick="window.open('http://its005gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=005', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-primary" onclick="window.open('http://its046gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=046', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-primary" onclick="window.open('http://its062gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=062', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-primary" onclick="window.open('http://its170gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=170', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-primary" onclick="window.open('http://its200gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=200', '_blank');" target="_blank" title="Reims">200</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-primary" onclick="window.open('http://its250gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=250', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-primary" onclick="window.open('http://its439gpas.it.fr:83/WebProcess.cit/MEW2_0010/XFMMenuIndicateurs?CodeSite=439', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div> 
+    <div class="bg-light  p-2 m-3 rounded shadow w-25 text-center">
+      <h5 class="text-center">Gammes à plat</h5>
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-success" onclick="window.open('http://its002gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Gennevilliers">002</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its004gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Bordeaux">004</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its005gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Nancy">005</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-success" onclick="window.open('http://its046gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Marseille">046</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its062gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Verneuil l'Etang">062</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-success" onclick="window.open('http://its170gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Surgères">170</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">  
+        <button class="btn btn-success" onclick="window.open('http://its200gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Reims">200</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%"> 
+        <button class="btn btn-success" onclick="window.open('http://its250gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Brienne le Château">250</button>
+      </div>   
+      <div class="btn-group-vertical p-1 rounded" style="width:100%">
+        <button class="btn btn-success" onclick="window.open('http://its439gpas.it.fr:81/WebProcess.cit/XOW3_103/', '_blank');" target="_blank" title="Briare">439</button>
+      </div> 
+    </div> 
+  </div>
+ </div>
+</section>
+<!-- 3ème SECTION les générateurs de liens web -->
+<section class="bg-light">
+  <h3 class="text">Séléctionner votre site : </h5> 
+  <div> 
+    <div id="app">
+  <div class="input-group m-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="Site"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+      </svg>&ensp;Site</label>
+    </div>
+    <select class="custom-select" id="Site" v-model="site">
+      <option selected>Sélectionner votre site...</option>
+      <option value="002">002-Gennevilliers</option>
+      <option value="004">004-Bordeaux</option>
+      <option value="005">005-Nancy</option>
+      <option value="046">046-Marseille</option>
+      <option value="062">062-Verneuil</option>
+      <option value="170">170-Surgères</option>
+      <option value="200">200-Reims</option>
+      <option value="250">250-Brienne</option>
+      <option value="439">439-Briare</option>
+    </select>
+  </div>
+
+  <!-- Section 2  -->
+<h4 class="text">Génération de fichiers  :</h5>
+  <div class="m-3 text-center">
+  <div class="row ">
+    <div class="col-sm-2 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Générer un EXECOF d'OF</h5>
+          <input class="m-2" type="text" v-model="of" placeholder="N° d'OF" aria-label="N° d'OF" maxlength="9">
+          <button class="btn btn-outline-success btn-sm" @click="Generateur_OF" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+          </svg>&ensp;Générer le lien</button>
+          <br/>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-2 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Générer un EXECOF d'OD</h5>
+          <input class="m-2" type="text" v-model="od_1" placeholder="N° d'OD" aria-label="N° d'OD" maxlength="9">
+          <button class="btn btn-outline-success btn-sm" @click="Generateur_OD_1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+          </svg>&ensp;Générer le lien</button>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2  -->
+<h4 class="text">Génération des datas :</h5>
+<div class=" m-3 text-center">
+  <div class="row ">
+    <div class="col-sm-2 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Type de Data à générer</h5>
+          <select class=" m-2 custom-select" id="Site" v-model="typedata">
+            <option value="DatasMatiere.csv">Data Matiere</option>
+            <option value="DatasMachine.csv">Data Machine</option>
+            <option value="DatasMO.csv">Data Main d'oeuvre</option>
+            <option value="DatasControle.csv">Data Contrôle Qualité</option>
+          </select> 
+          <br>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Génération Data à J-x</h5>
+          <input class="m-2" type="text" v-model="datej" placeholder="nombre de jours" aria-label="N° d'OD" maxlength="9">
+          <button class="btn btn-outline-success btn-sm" @click="Generateur_DataJour" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+          </svg>&ensp;Générer le lien</button>
+          <br/>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-5 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Génération Data pour une période donnée</h5>
+          du : <input type="date" id="start" name="trip-start" v-model="datep1" value="2022-01-01">
+          jusqu'au : <input type="date" id="end" name="trip-end" v-model="datep2" value="2022-01-31">
+          <button class="btn m-2 btn-outline-success btn-sm" @click="Generateur_DataPeriode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+          </svg>&ensp;Générer le lien</button>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+         
+      </div>
+      <script>
+        app = Vue.createApp({
+          data(){
+            return{
+              site:'',
+              of:'',
+              typedata:'',
+              datej:'',
+              datep1:'',
+              datep2:''
+
+
+            }
+          },
+          methods:{
+            Generateur_OF () {
+              prompt("Appuyer sur CTRL+C pour copier le lien :","http://its"+this.site+"gpas:81/WebProcess.cit/XOW3_0023/EXECOFFromNumOF?Site="+this.site+"&numOF="+this.of);
+            },
+            Generateur_OD_1 () {
+              prompt("Appuyer sur CTRL+C pour copier le lien :","http://its"+this.site+"gpas:81/WebProcess.cit/XOW3_0023/EXECOFUnitaire?Site="+this.site+"&numOF="+this.od_1);
+            },
+            Generateur_DataJour () {
+              prompt("Appuyer sur CTRL+C pour copier le lien :","http://its"+this.site+"gpas:83/WebProcess.cit/MEW2_0010/"+this.typedata+"?Site="+this.site+"&Duree="+this.datej+"&WebAgent=1");
+            },
+            Generateur_DataPeriode () {
+              prompt("Appuyer sur CTRL+C pour copier le lien :","http://its"+this.site+"gpas:83/WebProcess.cit/MEW2_0010/"+this.typedata+"?Site="+this.site+"&DateDebut="+this.datep1+"&DateFin="+this.datep2);
+            },
+
+            // Copy_Function() {
+            //   /* Get the text field */
+            //   var copyText = document.getElementById("myinput");
+
+            //   /* Select the text field */
+            //   copyText.select();
+              
+            //   /* Copy the text inside the text field */
+            //   navigator.clipboard.writeText(copyText.value);
+
+            //   /* Alert the copied text */
+            //   alert("Copied the text: " + copyText.value);
+            // },
+
+          }
+        });
+        app.mount('#app');
+      </script>
+    </div>
+</section> 
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light p-3">
+    <div class="container text-center">
+      <p>Copyright &copy; DTM - Avril 2022 - version 0.1 - Service Desk : <a class ="text-primary fw-bold" href="mailto:servicedesk@vivescia.com?Subject=Qubes;body= Afin de traiter le problème rapidement,merci de nous donner le maximum d'infos (N°OF, N° de BL)"> servicedesk@vivescia.com</a></p>    </div>
+</footer>
+</body>
+</html>
